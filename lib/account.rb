@@ -13,7 +13,7 @@ class Account
   end
 
   def deposit(amount, date)
-    transaction = {deposit: 10, withdrawal: 0, date: '01.01.2000'}
+    transaction = {deposit: amount, withdrawal: 0, date: date}
     @transactions.push(transaction)
   end
 end
