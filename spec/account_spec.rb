@@ -1,6 +1,6 @@
 require 'account'
 
-statement_header = 'date || credit || debit || balance\n'
+statement_header = "date || credit || debit || balance\n"
 
 describe Account do
   describe '::new' do
