@@ -8,6 +8,12 @@ Tech Test at Makers Acedemy
 $ rspec
 ```
 
+## Code Quality
+
+```
+$ rubocop
+```
+
 ## Approach
 
 I've organised my work using the process stages below.
