@@ -7,11 +7,13 @@ class Account
   end
 
   def print_statement
-    'date || credit || debit || balance'
+    statement_header = 'date || credit || debit || balance\n'
+    statement_rows = @transactions.map { |transaction| "#{transaction[:date]} + #{transaction[:amount]}"}
+    return statement_header + statement_rows.join('\n')
   end
 
   def deposit(amount, date)
-    transaction = {amount: 10, date: '01.01.2000'}
+    transaction = {deposit: 10, withdrawal: 0, date: '01.01.2000'}
     @transactions.push(transaction)
   end
 end
