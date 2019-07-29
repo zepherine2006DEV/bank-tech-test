@@ -16,7 +16,7 @@ describe Account do
   end
 
   describe '#print_statement' do
-    xit 'should show a single deposit' do
+    it 'should show a single deposit' do
       statement_row = '01.02.2003 || 20.00 || || 20.00'
       subject.deposit(20, '01.02.2003')
       expect(subject.print_statement).to eql(statement_header + statement_row)

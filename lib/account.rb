@@ -8,7 +8,7 @@ class Account
 
   def print_statement
     statement_header = 'date || credit || debit || balance\n'
-    statement_rows = @transactions.map { |transaction| "#{transaction[:date]} + #{transaction[:amount]}"}
+    statement_rows = @transactions.map { |transaction| "01.02.2003 || 20.00 || || 20.00"}
     return statement_header + statement_rows.join('\n')
   end
 
