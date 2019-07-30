@@ -5,7 +5,7 @@ describe 'deposit and withdrawal feature' do
     account = Account.new
     account.deposit(1000, '10-01-2012')
     expect(account.print_statement).to eql(
-      "date || credit || debit || balance/n10/01/2012 || 1000.00 || || 1000.00"
+      "date || credit || debit || balance\n10/01/2012 || 1000.00 || || 1000.00"
       )
     account.deposit(2000, '13-01-2012')
     expect(account.print_statement).to eql(

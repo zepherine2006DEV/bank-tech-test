@@ -34,9 +34,17 @@ describe Account do
   end
 
   describe '#deposit' do
-    it 'should deposit 10 with a valid date' do
+    it 'should create a transaction when deposit 10' do
       subject.deposit(10, '01.01.2000')
-      expect(subject.transactions[0]).to eql({deposit: 10, withdrawal: 0, date: '01.01.2000'})
+      expect(subject.transactions[0][:deposit]).to eql(10)
+    end
+  end
+
+  describe '#withdraw' do
+    it 'should create a transaction when withdraw 10' do
+      subject.deposit(20, '01.01.2000')
+      subject.withdraw(10, '01.02.2000')
+      expect(subject.transactions[1][:withdrawal]).to eql(10)
     end
   end
 end
