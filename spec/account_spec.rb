@@ -21,4 +21,14 @@ describe Account do
       expect(subject.transactions[1][:withdrawal]).to eql(10)
     end
   end
+
+  describe '#print_statement' do
+    it 'should use the Statement class to get a statement string' do
+      statement = double("statement")
+      allow(statement).to receive(:print_statement) { "Statement" }
+      account = Account.new(statement)
+      expect(account.print_statement).to eql("Statement")
+    end
+  end
+
 end

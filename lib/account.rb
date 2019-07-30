@@ -1,4 +1,4 @@
-require 'statement'
+require_relative 'statement'
 
 class Account
 

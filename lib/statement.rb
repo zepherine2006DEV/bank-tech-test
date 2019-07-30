@@ -1,13 +1,15 @@
 class Statement
+
+  STATEMENT_HEADER = "date || credit || debit || balance\n"
+
   def print_statement(transactions)
-    statement_header = "date || credit || debit || balance\n"
     statement_rows = transactions.map do |transaction|
       [transaction[:date], transaction[:deposit], transaction[:withdrawal]]
     end
     totals = calculate_balances(statement_rows)
     statement_rows.map.with_index { |element, idx| element[3] = totals[idx] }
     formatted_rows = format_statement(statement_rows)
-    return statement_header + formatted_rows.reverse.join("\n")
+    return STATEMENT_HEADER + formatted_rows.reverse.join("\n")
   end
 
   private

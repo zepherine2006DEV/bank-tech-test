@@ -51,6 +51,8 @@ I've organised my work using the process stages below.
 
 ## Design
 
-I've chosen to use a single class, Account. This was an initial approach which could be refactored later.
+I've chosen to use two classes, Account and Statement.
+The Account class knows what transactions are on the account and accepts deposits and withdrawals.
+The Statement class knows how to format the account transactions as a statement.
 
-Suggested changes would be to separate the transactions into their own class, and to separate the display logic somehow.
+Suggested changes would be to separate the transactions into their own class.
