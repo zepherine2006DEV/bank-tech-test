@@ -13,16 +13,9 @@ bundle install
 
 ## How to Run
 
-```ruby
-irb
-acc = Account.new
-acc.deposit(20,'12-03-2009')
-acc.withdraw(10, '13-03-2009')
-puts acc.print_statememt
-date || credit || debit || balance
-13.03.2009 || || 10.00 || 10.00
-12.03.2009 || 20.00 || || 20.00
-```
+This application runs in the irb. A screenshot is included below. Note that to print the statement on multiple lines you should prefix the method call with puts.
+
+![irb image](screenshot.png)
 
 ## How to Test
 
