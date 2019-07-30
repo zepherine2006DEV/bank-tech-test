@@ -2,6 +2,15 @@
 
 Tech Test at Makers Acedemy
 
+## How to Install
+
+* Clone this repository
+* Install dependencies
+
+```console
+bundle install
+```
+
 ## How to Run
 
 ```ruby
