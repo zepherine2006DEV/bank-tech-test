@@ -19,7 +19,7 @@ class Account
        end
     statement_rows.map.with_index { |element, idx| element[3] = totals[idx] }
     formatted_rows = statement_rows.map do |element|
-      "#{element[0]} " +
+      "#{element[0].gsub('-','/')} " +
       "||" +
       (element[1] != 0 ? " #{element[1]}.00 " : " ") +
       "||" +
@@ -27,7 +27,7 @@ class Account
       "||" +
       " #{element[3]}.00"
       end
-    return statement_header + formatted_rows.join("\n")
+    return statement_header + formatted_rows.reverse.join("\n")
   end
 
   def deposit(amount, date)
