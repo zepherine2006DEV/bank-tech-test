@@ -48,3 +48,9 @@ I've organised my work using the process stages below.
 * Deposits, withdrawal.
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).  
+
+## Design
+
+I've chosen to use a single class, Account. This was an initial approach which could be refactored later.
+
+Suggested changes would be to separate the transactions into their own class, and to separate the display logic somehow.
