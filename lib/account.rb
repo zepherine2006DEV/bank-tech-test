@@ -13,13 +13,19 @@ class Account
       end
     totals = []
     statement_rows.inject(0) do |sum, element|
-         new_total = sum + element[1]
+         new_total = sum + element[1] - element[2]
          totals.push(new_total)
          new_total
        end
     statement_rows.map.with_index { |element, idx| element[3] = totals[idx] }
     formatted_rows = statement_rows.map do |element|
-      "#{element[0]} || #{element[1]}.00 || || #{element[3]}.00"
+      "#{element[0]} " +
+      "||" +
+      (element[1] != 0 ? " #{element[1]}.00 " : " ") +
+      "||" +
+      (element[2] != 0 ? " #{element[2]}.00 " : " ") +
+      "||" +
+      " #{element[3]}.00"
       end
     return statement_header + formatted_rows.join("\n")
   end
