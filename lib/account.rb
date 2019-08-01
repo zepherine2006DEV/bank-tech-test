@@ -9,7 +9,7 @@ class Account
     @transactions = []
   end
 
-  def print_statement
+  def statement
     @statement.print_statement(@transactions)
   end
 

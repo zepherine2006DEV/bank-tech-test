@@ -1,0 +1,4 @@
+#ignore the code coverage results
+coverage/
+#ignore the gemfile lock file
+Gemfile.lock

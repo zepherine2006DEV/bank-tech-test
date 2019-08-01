@@ -6,7 +6,7 @@ describe Account do
       expect(subject.transactions.length).to eql(0)
     end
   end
-
+  
   describe '#deposit' do
     it 'should create a transaction when deposit 10' do
       subject.deposit(10, '01-01-2000')
@@ -22,12 +22,12 @@ describe Account do
     end
   end
 
-  describe '#print_statement' do
+  describe '#statement' do
     it 'should use the Statement class to get a statement string' do
       statement = double("statement")
       allow(statement).to receive(:print_statement) { "Statement" }
       account = Account.new(statement)
-      expect(account.print_statement).to eql("Statement")
+      expect(account.statement).to eql("Statement")
     end
   end
 
